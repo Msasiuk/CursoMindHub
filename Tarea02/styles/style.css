@@ -1,0 +1,192 @@
+/* MAQUETA DE COLORES   
+#F1D830 Amarillo opaco
+#1F1912 Pseudo negro
+#C14E35 Naranja opaco
+#5BA39B Verde Agua
+#BFCAC9 Gris Claro
+*/
+
+/*Object fit, ajusta la imagen
+object-fit: contain (ajusta la imagen dentro del alto y ancho indicado respetando el aspecto de relación de la imagen)
+object-fit: cover (cubre el alto y ancho del espacio con la imagen)*/
+
+body {
+    background-color: #5BA39B;
+    font-family: 'Poppins', sans-serif;
+    color: #1F1912;
+}
+
+/*Normalizando el código para que el tamaño de la caja incluya el padding y el borde, no incluye el margen. Por defecto se encuentra -- box-sizing: box content --, pero en estos casos tengo que tener en cuenta sumar width, padding y border, en el caso anterior configura todo para que el total de el width especificado*/
+* {
+    box-sizing: border-box;
+}
+
+/*Se cambia a position relative pPara que los elementos hijos tomen posición absoluta con respecto al header y no al body*/
+.header {
+    position: relative;
+}
+
+.h1 {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    font-size: 70px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    text-shadow: #5BA39B 10px 10PX 20px;
+    color: #FFFFFF;
+}
+
+.img-header {
+    width: 100%;
+
+}
+
+.h2-header {
+    font-size: 25px;
+    text-align: center;
+    background-color: #1F1912;
+    color: white;
+    padding: 10px 0;
+}
+
+.img-logo {
+    background-color: white;
+    width: 20%;
+    position: absolute;
+    top: 62%;
+    left: 75%;
+    border-radius: 20%;
+}
+
+.nav {
+    position: absolute;
+    font-size: 25px;
+    /*Nav ocupa 25% el 75% lo ocupa el Main*/
+    left: 5%;
+    width: 20%;
+    line-height: 5;
+}
+
+.nav a {
+    color: #F1D830;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: #C14E35;
+}
+
+.main {
+    line-height: 2.5;
+    margin-left: 25%;
+    /*Nav ocupa 25% el 75% lo ocupa el Main*/
+    width: 70%;
+    right: 5%;
+}
+
+.article-main,
+.section-main {
+    line-height: 1.5;
+    margin: 40px 0;
+}
+
+.article-main p {
+    font-weight: bold;
+    font-size: 25px;
+    font-style: italic;
+    text-align: justify;
+}
+
+.article-main h3,
+.section-main p {
+    text-indent: 20px;
+    font-size: 25px;
+
+}
+
+.section-main h3 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.footer {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 200px 0px 20px 0px;
+}
+
+@media screen and (max-width:900px) {
+    .h1 {
+        font-size: 40px;
+    }
+
+    .nav {
+        position: absolute;
+        /*Nav ocupa 25% el 75% lo ocupa el Main*/
+        left: 2%;
+        width: 23%;
+        line-height: 5;
+    }
+
+    .main {
+        line-height: 2.5;
+        margin-left: 25%;
+        /*Nav ocupa 25% el 75% lo ocupa el Main*/
+        width: 73%;
+        right: 2%;
+    }
+
+    .h2-header,
+    .nav,
+    .article-main p,
+    .article-main h3,
+    .section-main p,
+    .section-main h3 {
+        font-size: 15px;
+    }
+
+    .footer {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .h1 {
+        font-size: 20px;
+    }
+
+    .nav {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    .main {
+        line-height: 2.5;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .h2-header,
+    .nav,
+    .article-main p,
+    .article-main h3,
+    .section-main p,
+    .section-main h3 {
+        font-size: 15px;
+    }
+
+    .footer {
+        font-size: 10px;
+    }
+
+
+}
