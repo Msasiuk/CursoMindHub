@@ -1,0 +1,292 @@
+/*
+#373739 gris claro
+#19191a gris opaco
+#020202 negro
+#c9b977 dorado opaco
+#ecdda2 dorado claro
+*/
+
+/* MAQUETA DE COLORES   
+#F1D830 Amarillo opaco
+#1F1912 Pseudo negro
+#C14E35 Naranja opaco
+#5BA39B Verde Agua
+#BFCAC9 Gris Claro
+*/
+
+body {
+    background-color: #020202;
+    font-family: 'Poppins', sans-serif;
+    color: #ecdda2;
+}
+
+/*Normalizando el código para que el tamaño de la caja incluya el padding y el borde, no incluye el margen. Por defecto se encuentra -- box-sizing: box content --, pero en estos casos tengo que tener en cuenta sumar width, padding y border, en el caso anterior configura todo para que el total de el width especificado*/
+* {
+    box-sizing: border-box;
+}
+
+/*Se cambia a position relative pPara que los elementos hijos tomen posición absoluta con respecto al header y no al body*/
+.header {
+    position: relative;
+}
+
+.h1 {
+    position: absolute;
+    font-size: 70px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    color: #1F1912;
+    padding: 10px 20px 20px;
+    /*Use text shadow para dar borde a las letras, con stroke se perdía el interior amarillo de las letras*/
+    text-shadow: -2px 2px 0 #C14E35, 2px 2px 0 #C14E35, 2px -2px 0 #C14E35, -2px -2px 0 #C14E35;
+    color: #F1D830;
+    animation-duration: 3s;
+    animation-name: animacionTitulo;
+    animation-timing-function: ease-in-out;
+    text-align: left;
+}
+
+@keyframes animacionTitulo {
+    0% {
+        opacity: 0;
+        /*traslate 
+        1er valor horizontal
+        2do valor vertical-align: ;*/
+        transform: translate(10%, 40%) scale(0.5, 0.5);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translate(5%, 50%) scale(0.7, 0.7);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0%, 0%) scale(1, 1);
+    }
+}
+
+.figure-header {
+    /*Incorpore altura máxima porque la imagen era muy alta, y overflow para que el excedente de la imagen (que está al 100%) se oculte*/
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.img-header {
+    width: 100%;
+}
+
+.h2-header {
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #F1D830;
+    padding: 10px 0px;
+    border: 2px solid #1F1912;
+    text-shadow: 3px 3px 0px #558ABB;
+
+}
+
+
+.figure-logo {
+    width: 25%;
+}
+
+.figure-logo>img {
+    transition: 0.5s ease-in-out;
+}
+
+.img-logo {
+    background-color: white;
+    /*Logo ocupa 23% el 77% lo ocupa el Main*/
+    width: 18%;
+    position: absolute;
+    top: 110%;
+    left: 5%;
+    border-radius: 20%;
+    border: 2px solid #1F1912;
+    box-shadow: 0px 0px 20px white;
+}
+
+.img-hockey {
+    background-color: white;
+    /*Logo ocupa 23% el 77% lo ocupa el Main*/
+    width: 18%;
+    position: absolute;
+    top: 116%;
+    left: 0%;
+    border-radius: 20%;
+    border: 2px solid #1F1912;
+    box-shadow: 0px 0px 20px white;
+    opacity: 0;
+}
+
+.figure-logo:hover .img-hockey {
+    translate: 28%;
+    opacity: 1.0;
+
+}
+
+.figure-logo:hover .img-logo {
+    opacity: 0.0;
+}
+
+.nav {
+    position: fixed;
+    font-size: 25px;
+    top: 5px;
+    right: 5px;
+    text-align: center;
+}
+
+.nav li {
+    display: inline-block;
+    padding: 7px;
+    border: 2px solid #1F1912;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #BFCAC9;
+    background-color: #5acabd;
+    transition: 0.5s;
+}
+
+.nav li:hover {
+    box-shadow: 2px 2px 10px #BFCAC9;
+    transform: rotate(-5deg);
+
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav a:hover {
+    color: #F1D830;
+
+}
+
+.main {
+    line-height: 2.5;
+    margin-left: 25%;
+    /*Logo ocupa 25% el 75% lo ocupa el Main*/
+    width: 72%;
+    right: 5%;
+}
+
+.article-main,
+.section-main {
+    line-height: 1.5;
+    margin: 40px 0;
+}
+
+.article-main p {
+    font-weight: bold;
+    font-size: 25px;
+    font-style: italic;
+    text-align: justify;
+}
+
+.article-main h3,
+.section-main p {
+    text-indent: 20px;
+    font-size: 25px;
+    text-align: justify;
+}
+
+.section-main h3 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.footer {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 250px 0px 20px 0px;
+}
+
+@media screen and (max-width:1050px) {
+    .h1 {
+        font-size: 40px;
+        top: 30px;
+        left: 30px;
+    }
+
+    .h2-header {
+        font-size: 25px;
+    }
+
+    .nav {
+        top: 60px;
+    }
+
+    .main {
+        line-height: 2.5;
+        margin-left: 25%;
+        /*Nav ocupa 25% el 75% lo ocupa el Main*/
+        width: 73%;
+        right: 2%;
+    }
+
+    .nav,
+    .article-main p,
+    .article-main h3,
+    .section-main p,
+    .section-main h3 {
+        font-size: 18px;
+    }
+
+    .footer {
+        font-size: 12px;
+        margin: 200px 0px 20px 0px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .h1 {
+        font-size: 25px;
+        top: 20px;
+        left: 20px;
+    }
+
+    .h2-header {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .nav {
+        top: 45px;
+    }
+
+    .img-logo {
+        width: 20%;
+        position: absolute;
+        top: 75%;
+        left: 68%;
+        border-radius: 20%;
+        animation-duration: 2s;
+        animation-name: animacionOpacidad;
+    }
+
+    .main {
+        line-height: 2.5;
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .nav,
+    .article-main p,
+    .article-main h3,
+    .section-main p,
+    .section-main h3 {
+        font-size: 15px;
+    }
+
+    .footer {
+        font-size: 12px;
+        margin-top: 50px;
+    }
+}
