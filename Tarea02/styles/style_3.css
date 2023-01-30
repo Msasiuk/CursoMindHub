@@ -14,7 +14,7 @@
 #BFCAC9 Gris Claro
 */
 
-body {
+.body {
     background-color: #020202;
     font-family: 'Poppins', sans-serif;
     color: #ecdda2;
@@ -123,9 +123,8 @@ body {
 }
 
 .figure-logo:hover .img-hockey {
-    translate: 28%;
+    transform: translate(28%);
     opacity: 1.0;
-
 }
 
 .figure-logo:hover .img-logo {

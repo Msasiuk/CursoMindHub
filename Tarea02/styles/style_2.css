@@ -10,7 +10,7 @@
 object-fit: contain (ajusta la imagen dentro del alto y ancho indicado respetando el aspecto de relación de la imagen)
 object-fit: cover (cubre el alto y ancho del espacio con la imagen)*/
 
-body {
+.body {
     background-color: #dcebe9;
     font-family: 'Poppins', sans-serif;
     color: #1F1912;
