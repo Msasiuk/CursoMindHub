@@ -80,6 +80,14 @@ body {
     box-shadow: 0px 0px 20px #1F1912;
 }
 
+.img-hockey {
+    width: 18%;
+    position: absolute;
+    top: 116%;
+    left: 0%;
+    opacity: 0;
+}
+
 .nav {
     position: absolute;
     font-size: 25px;
