@@ -124,14 +124,33 @@ object-fit: cover (cubre el alto y ancho del espacio con la imagen)*/
     opacity: 0.0;
 }
 
+.flex-column {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+form {
+    background: white;
+}
+
+fieldset {
+    margin: 0px 0px 25px 0px;
+}
+
+label {
+    margin: 0px auto 0px 0px;
+}
+
 .nav {
     position: fixed;
     font-size: 25px;
     top: 10px;
     right: -135px;
-    /*Para colocar en columnas los anchor*/
-    display: flex;
-    flex-flow: column nowrap;
 }
 
 .nav a {
