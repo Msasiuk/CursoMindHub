@@ -135,15 +135,76 @@ object-fit: cover (cubre el alto y ancho del espacio con la imagen)*/
 }
 
 form {
-    background: white;
+    /* background: white; */
+    font-size: 20px;
 }
 
 fieldset {
     margin: 0px 0px 25px 0px;
 }
 
-label {
-    margin: 0px auto 0px 0px;
+/*Selector de padre a traves de hijo para poder hacer 2 elementos por columna y poder usar flex*/
+label:has(> input[type="text"]),
+label:has(> input[type="date"]),
+label:has(> input[type="number"]),
+fieldset>div {
+    width: 50%;
+}
+
+/*Etiquetas que ocupan el ancho --> dirección, firma y fecha*/
+.long-label:has(> input[type="text"]) {
+    width: 100%;
+}
+
+.long-label:has(> input[type="file"]),
+.long-label:has(> input[type="date"]) {
+    display: block;
+}
+
+/*Selector de atributo para setear width, si se usa size en la etiqueta despues es mas complicado ajustar el width en medias querys*/
+input[type="text"],
+.long-label input[type="text"] {
+    width: 60%;
+}
+
+/*Forma cuadrada para radio button de grade y uniform size*/
+.square-radio-button input[type='radio'] {
+    box-sizing: border-box;
+    appearance: none;
+    border-radius: 1px;
+    outline: 1px solid #666666;
+    background-color: #dcebe9;
+    width: 11px;
+    height: 11px;
+    margin: auto 3px 1px 4px;
+}
+
+.square-radio-button input[type='radio']:checked {
+    background: rgb(0, 140, 255);
+}
+
+.justify-text>p {
+    text-align: justify;
+}
+
+.form-button {
+    margin: 0 10px;
+    font-size: 20px;
+    padding: 7px 12px;
+    color: white;
+    transition: color 0.5s;
+    width: 100px;
+    border: 2px solid #31726a;
+    border-radius: 5px;
+    background-color: #5acabd;
+    transition: 0.5s;
+}
+
+.form-button:hover {
+    box-shadow: 2px 2px 10px white;
+    border: 2px solid #5acabd;
+    background-color: #31726a;
+    transform: rotate(-5deg);
 }
 
 .nav {
@@ -213,18 +274,18 @@ label {
 .section-main p,
 .article-main-rules p {
     text-indent: 20px;
-    font-size: 25px;
+    font-size: 20px;
     text-align: justify;
 }
 
 .title-text {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 25px;
     text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.993);
 }
 
 .section-main-game {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .p-section-game {
@@ -240,7 +301,7 @@ label {
 
 .ol-main {
     list-style: decimal;
-    font-size: 25px;
+    font-size: 20px;
     text-align: justify;
 }
 
@@ -255,7 +316,7 @@ label {
 
 .ul {
     list-style: circle;
-    font-size: 25px;
+    font-size: 20px;
     padding-left: 25px;
 }
 
@@ -273,7 +334,7 @@ li>span {
 
 .p-main {
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .span-p {
@@ -301,6 +362,22 @@ td {
     vertical-align: middle;
 }
 
+.td-map {
+    font-weight: bold;
+    text-decoration: underline;
+    ;
+}
+
+.td-map:hover {
+    cursor: pointer;
+}
+
+.w3-teal {
+    width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+}
+
 .no-visible {
     opacity: 0;
 }
@@ -316,7 +393,7 @@ td {
 .footer {
     text-align: center;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16x;
     margin: 200px 0px 20px 0px;
 }
 

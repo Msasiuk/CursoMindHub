@@ -93,26 +93,24 @@
     <main class="main">
       <form action="./show_data.html" method="GET" target="_blank">
         <fieldset class="flex-row">
-          <legend>Personal Information:</legend>
-          <label class="half-width"
-            >Player's First Name:
-            <input type="text" name="first_name" size="50"
+          <legend class="title-text">Personal Information:</legend>
+
+          <label
+            >Player's First Name: <input type="text" name="first_name" required
           /></label>
 
-          <label class="half-width"
-            >Last Name: <input type="text" name="last_name" size="50"
+          <label
+            >Last Name: <input type="text" name="last_name" required
           /></label>
 
-          <label class="complete-width"
-            >Street Address: <input type="text" name="street_address"
+          <label class="long-label"
+            >Street Address: <input type="text" name="street_address" required
           /></label>
 
-          <label class="half-width"
-            >City: <input type="text" name="city" size="50"
-          /></label>
+          <label>City: <input type="text" name="city" required /></label>
 
           <!-- ZIP Codes range from 00501, belonging to the Internal Revenue Service in Holtsville, NY, to 99950 in Ketchikan -->
-          <label class="half-width" for="zipCode" size="50"
+          <label
             >Zip Code:
             <input
               type="number"
@@ -121,64 +119,69 @@
               max="99950"
               pattern="[0-9]{5}"
               placeholder="00501"
+              required
           /></label>
 
-          <label class="half-width"
+          <label
             >Birth Date(mm/dd/yyyy):
             <input
               type="date"
               name="birth_date"
               min="2000-12-31"
               max="2022-01-01"
+              required
           /></label>
 
-          <label>Gender: </label>
-          <label
-            >Female <input type="radio" name="gender" value="female"
-          /></label>
-          <label>Male <input type="radio" name="gender" value="male" /></label>
+          <div>
+            <label>Gender: </label>
+            <label
+              >Female <input type="radio" name="gender" value="female" required
+            /></label>
+            <label
+              >Male <input type="radio" name="gender" value="male"
+            /></label>
+          </div>
 
-          <div class="complete-width">
+          <div class="square-radio-button">
             <label>Grade: </label>
             <label
-              ><input
-                type="radio"
-                name="grade"
-                value="pre_school"
-              />Pre-School</label
+              ><input type="radio" name="grade" value="pre_school" required />
+              Pre-School</label
             >
 
-            <label><input type="radio" name="grade" value="1st" />1st</label>
-            <label><input type="radio" name="grade" value="2nd" />2nd</label>
-            <label><input type="radio" name="grade" value="3rd" />3rd</label>
-            <label><input type="radio" name="grade" value="4th" />4th</label>
-            <label><input type="radio" name="grade" value="5th" />5th</label>
+            <label><input type="radio" name="grade" value="1st" /> 1st</label>
+            <label><input type="radio" name="grade" value="2nd" /> 2nd</label>
+            <label><input type="radio" name="grade" value="3rd" /> 3rd</label>
+            <label><input type="radio" name="grade" value="4th" /> 4th</label>
+            <label><input type="radio" name="grade" value="5th" /> 5th</label>
           </div>
         </fieldset>
 
-        <fieldset class="flex-row">
+        <fieldset>
           <!-- En select nam e no va en cada elemento, sino en etiqueta ppal -->
           <legend>
-            <h3>Which elementary school do yo live near</h3>
-            <p>Closest School:</p>
+            <h3 class="title-text">Which elementary school do yo live near</h3>
           </legend>
 
-          <select name="school">
-            <option value="aj_katsenmaier">AJ Katsenmaier</option>
-            <option value="greenbay">Greenbay</option>
-            <option value="howard_a_yeager">Howard A Yeager</option>
-            <option value="marjorie_p_hart">Maryorie P Hart</option>
-            <option value="north_elementary">North Elementary</option>
-            <option value="south_elementary">South Elementary</option>
-          </select>
+          <label
+            >Closest School:
+            <select name="school">
+              <option value="aj_katsenmaier">AJ Katsenmaier</option>
+              <option value="greenbay">Greenbay</option>
+              <option value="howard_a_yeager">Howard A Yeager</option>
+              <option value="marjorie_p_hart">Maryorie P Hart</option>
+              <option value="north_elementary">North Elementary</option>
+              <option value="south_elementary">South Elementary</option>
+            </select>
+          </label>
         </fieldset>
 
         <fieldset>
-          <legend>
+          <legend class="title-text">
             What position(s) do you normally play? (check all that apply)
           </legend>
           <label
-            ><input type="checkbox" name="position" value="forward" />
+            ><input type="checkbox" name="position" value="forward" required />
             Forward</label
           >
           <label
@@ -195,10 +198,15 @@
           >
         </fieldset>
 
-        <fieldset>
-          <legend><h3>Uniform Size:</h3></legend>
+        <fieldset class="square-radio-button">
+          <legend><h3 class="title-text">Uniform Size:</h3></legend>
           <label
-            ><input type="radio" name="uniform_size" value="youth_small" />
+            ><input
+              type="radio"
+              name="uniform_size"
+              value="youth_small"
+              required
+            />
             Youth Small
           </label>
           <label
@@ -228,8 +236,8 @@
           >
         </fieldset>
 
-        <fieldset>
-          <legend><h3>Permission to play</h3></legend>
+        <fieldset class="justify-text">
+          <legend><h3 class="title-text">Permission to play</h3></legend>
 
           <p>
             I, the parent or guardian of the minor registrant, agree that the
@@ -250,17 +258,19 @@
             cancellation policy and agree to its terms.
           </p>
 
-          <label
+          <label class="long-label"
             >Parent/Guardian Signature:
-            <input type="file" name="parent_guardian_signature"
+            <input type="file" name="parent_guardian_signature" required
           /></label>
 
-          <label
-            >Date: <input type="date" name="birth_date" min="2023-02-03"
+          <label class="long-label"
+            >Date:
+            <input type="date" name="birth_date" min="2023-02-03" required
           /></label>
         </fieldset>
 
-        <button type="submit">Submit</button>
+        <button class="form-button" type="submit">Submit</button>
+        <button class="form-button" type="reset">Clean</button>
       </form>
     </main>
 
