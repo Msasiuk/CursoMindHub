@@ -124,10 +124,18 @@ object-fit: cover (cubre el alto y ancho del espacio con la imagen)*/
     opacity: 0.0;
 }
 
+
 .flex-column {
     display: flex;
     flex-flow: column nowrap;
 }
+
+.space-between {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
 
 .flex-row {
     display: flex;
@@ -135,48 +143,88 @@ object-fit: cover (cubre el alto y ancho del espacio con la imagen)*/
 }
 
 form {
-    /* background: white; */
     font-size: 20px;
+    padding: 20px;
 }
 
 fieldset {
-    margin: 0px 0px 25px 0px;
+    margin: 0px 0px 20px 0px;
 }
 
-/*Selector de padre a traves de hijo para poder hacer 2 elementos por columna y poder usar flex*/
-label:has(> input[type="text"]),
-label:has(> input[type="date"]),
-label:has(> input[type="number"]),
-fieldset>div {
-    width: 50%;
+.item-full-width {
+    flex-basis: 100%;
 }
 
-/*Etiquetas que ocupan el ancho --> dirección, firma y fecha*/
-.long-label:has(> input[type="text"]) {
-    width: 100%;
+.item-half-width {
+    flex-basis: 49%;
 }
 
-.long-label:has(> input[type="file"]),
-.long-label:has(> input[type="date"]) {
-    display: block;
+.item-quarter-width {
+    flex-basis: 34%;
 }
 
-/*Selector de atributo para setear width, si se usa size en la etiqueta despues es mas complicado ajustar el width en medias querys*/
-input[type="text"],
-.long-label input[type="text"] {
-    width: 60%;
+/*Transforma items de flex en flex para que el input alcance el 100% width*/
+.inner-flex {
+    display: flex;
+    align-items: center;
+}
+
+.input-full-width {
+    border: 0px solid transparent;
+    border-bottom: 1px solid #1F1912;
+    flex-grow: 1;
+    font-size: 18px;
+    margin: 0px 10px;
+}
+
+.item-1 {
+    order: 1;
+}
+
+.item-2 {
+    order: 2;
+}
+
+.item-3 {
+    order: 3;
+}
+
+.item-4 {
+    order: 4;
+}
+
+.item-5 {
+    order: 5;
+}
+
+.item-6 {
+    order: 6;
+}
+
+.item-7 {
+    order: 7;
+}
+
+select {
+    margin: 0px 10px;
+    font-size: 18px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin: 0px 10px;
 }
 
 /*Forma cuadrada para radio button de grade y uniform size*/
-.square-radio-button input[type='radio'] {
+.square-radio-button input[type="radio"] {
     box-sizing: border-box;
     appearance: none;
     border-radius: 1px;
     outline: 1px solid #666666;
-    background-color: #dcebe9;
+    background-color: white;
     width: 11px;
     height: 11px;
-    margin: auto 3px 1px 4px;
+    margin: auto 10px 1px 10px;
 }
 
 .square-radio-button input[type='radio']:checked {
@@ -342,7 +390,7 @@ li>span {
 }
 
 .table-main {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     font-size: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -351,13 +399,14 @@ li>span {
 
 .table-main thead {
     font-weight: bold;
+    /* Tabla sin bordes, ni color, sólo bold el título
     background-color: #5acabd;
-    color: white;
+    color: white; */
 }
 
 th,
 td {
-    border: 1px solid #5acabd;
+    /* border: 1px solid #5acabd; */
     text-align: center;
     vertical-align: middle;
 }
