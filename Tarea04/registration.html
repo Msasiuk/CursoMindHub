@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form MDHL</title>
-    <link rel="stylesheet" href="./styles/reset.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/x-icon" href="./assets/mightyDucks.ico" />
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./assets/mightyDucks.ico">
   </head>
 
   <body class="body">
@@ -26,7 +20,7 @@
           src="./assets/design1_image2.jpg"
           class="img-header"
           alt="Foto entrenamiento en MDHL"
-        />
+        >
       </figure>
 
       <h2 class="h2-header">Registration Form</h2>
@@ -36,63 +30,78 @@
           src="./assets/logoMightyDucks01.png"
           class="img-logo"
           alt="Logo Mighty Ducks Hockey League"
-        />
+        >
         <img
           src="./assets/hockey01.jpg"
-          class="img-hockey"
+          class="img-hockey01"
           alt="Logo Mighty Ducks Hockey League"
-        />
+        >
+        <img
+          src="./assets/hockey02.jpg"
+          class="img-hockey02"
+          alt="Logo Mighty Ducks Hockey League"
+        >
+        <img
+          src="./assets/hockey03.jpg"
+          class="img-hockey03"
+          alt="Logo Mighty Ducks Hockey League"
+        >
       </figure>
 
-      <nav class="nav flex-column">
+      <nav class="nav">
         <a href="./index.html"
           ><img
             src="./assets/home.svg"
             class="img-nav"
             alt="icono del index"
-          />Home</a
+          >Home</a
         >
         <a href="./about.html">
           <img
             src="./assets/hockey.svg"
             class="img-nav"
             alt="icono acerca de nosotros"
-          />About Us</a
+          >About Us</a
         >
         <a href="./contact.html"
           ><img
             src="./assets/contacts.svg"
             class="img-nav"
             alt="icono de contacto"
-          />Contact</a
+          >Contact</a
         >
         <a href="./game_info.html"
           ><img
             src="./assets/calendar.svg"
             class="img-nav"
             alt="icono de calendario"
-          />Calendar</a
+          >Games Info</a
         >
         <a href="./rules.html"
           ><img
             src="./assets/rule.svg"
             class="img-nav"
             alt="icono de reglas"
-          />Rules</a
+          >Rules</a
         >
         <a class="a-active" href="#"
           ><img
-            src="./assets/rule.svg"
+            src="./assets/registration.svg"
             class="img-nav"
             alt="icono de reglas"
-          />Registration</a
+          >Registration</a
         >
       </nav>
     </header>
 
-    <main class="main">
-      <form action="./show_data.html" method="GET" target="_blank">
-        <fieldset class="space-between">
+    <main class="flex-column">
+      <form
+        class="form-main flex-column"
+        action="./show_data.html"
+        method="GET"
+        target="_blank"
+      >
+        <fieldset class="row-space-between">
           <legend class="title-text item-full-width">
             Personal Information:
           </legend>
@@ -103,7 +112,7 @@
               type="text"
               name="first_name"
               required
-          /></label>
+          ></label>
 
           <label class="item-half-width inner-flex"
             >Last Name:<input
@@ -111,7 +120,7 @@
               type="text"
               name="last_name"
               required
-          /></label>
+          ></label>
 
           <label class="item-full-width inner-flex"
             >Street Address:<input
@@ -119,7 +128,7 @@
               type="text"
               name="street_address"
               required
-          /></label>
+          ></label>
 
           <label class="item-half-width inner-flex"
             >City:<input
@@ -127,9 +136,10 @@
               type="text"
               name="city"
               required
-          /></label>
+          ></label>
 
           <!-- ZIP Codes range from 00501, belonging to the Internal Revenue Service in Holtsville, NY, to 99950 in Ketchikan -->
+           <!-- pattern="[0-9]{5}" Attribute pattern is only allowed when the input type is email, password, search, tel, text, or url-->
           <label class="item-half-width inner-flex"
             >Zip Code:<input
               class="input-full-width"
@@ -137,10 +147,9 @@
               name="zip_code"
               min="00501"
               max="99950"
-              pattern="[0-9]{5}"
               placeholder="00501"
               required
-          /></label>
+          ></label>
 
           <label class="item-half-width inner-flex"
             >Birth Date(mm/dd/yyyy):<input
@@ -150,14 +159,14 @@
               min="2000-12-31"
               max="2022-01-01"
               required
-          /></label>
+          ></label>
 
           <div class="item-half-width">
             <label>Gender:</label>
             <label
               >Female<input type="radio" name="gender" value="female" required
-            /></label>
-            <label>Male<input type="radio" name="gender" value="male" /></label>
+            ></label>
+            <label>Male<input type="radio" name="gender" value="male"></label>
           </div>
 
           <div class="square-radio-button">
@@ -168,14 +177,14 @@
                 name="grade"
                 value="pre_school"
                 required
-              />Pre-School</label
+              >Pre-School</label
             >
 
-            <label><input type="radio" name="grade" value="1st" />1st</label>
-            <label><input type="radio" name="grade" value="2nd" />2nd</label>
-            <label><input type="radio" name="grade" value="3rd" />3rd</label>
-            <label><input type="radio" name="grade" value="4th" />4th</label>
-            <label><input type="radio" name="grade" value="5th" />5th</label>
+            <label><input type="radio" name="grade" value="1st">1st</label>
+            <label><input type="radio" name="grade" value="2nd">2nd</label>
+            <label><input type="radio" name="grade" value="3rd">3rd</label>
+            <label><input type="radio" name="grade" value="4th">4th</label>
+            <label><input type="radio" name="grade" value="5th">5th</label>
           </div>
         </fieldset>
 
@@ -207,28 +216,28 @@
               name="position"
               value="forward"
               required
-            />Forward</label
+            >Forward</label
           >
           <label class="item-quarter-width"
             ><input
               type="checkbox"
               name="position"
               value="midfield"
-            />Midfield</label
+            >Midfield</label
           >
           <label class="item-quarter-width"
             ><input
               type="checkbox"
               name="position"
               value="defense"
-            />Defense</label
+            >Defense</label
           >
           <label class="item-quarter-width">
             <input
               type="checkbox"
               name="position"
               value="goalkeeper"
-            />Goalkeeper</label
+            >Goalkeeper</label
           >
         </fieldset>
 
@@ -242,18 +251,18 @@
               name="uniform_size"
               value="youth_small"
               required
-            />Youth Small</label
+            >Youth Small</label
           >
           <label class="item-quarter-width item-3"
             ><input
               type="radio"
               name="uniform_size"
               value="youth_medium"
-            />Youth Medium</label
+            >Youth Medium</label
           >
 
           <label class="item-quarter-width item-5"
-            ><input type="radio" name="uniform_size" value="youth_large" />Youth
+            ><input type="radio" name="uniform_size" value="youth_large">Youth
             Large</label
           >
           <label class="item-quarter-width item-7"
@@ -261,24 +270,24 @@
               type="radio"
               name="uniform_size"
               value="small"
-            />Small</label
+            >Small</label
           >
           <label class="item-quarter-width item-2"
             ><input
               type="radio"
               name="uniform_size"
               value="medium"
-            />Medium</label
+            >Medium</label
           >
           <label class="item-quarter-width item-4"
             ><input
               type="radio"
               name="uniform_size"
               value="large"
-            />Large</label
+            >Large</label
           >
           <label class="item-quarter-width item-6"
-            ><input type="radio" name="uniform_size" value="extra_large" />Extra
+            ><input type="radio" name="uniform_size" value="extra_large">Extra
             Large</label
           >
         </fieldset>
@@ -305,26 +314,28 @@
             that I have read the cancellation policy and agree to its terms.
           </p>
 
-          <label class="item-full-width inner-flex"
+          <label class="item-full-width inner-flex item-space"
             >Parent/Guardian Signature:<input
               class="input-full-width"
-              type="text item-full-width"
+              type="text"
               name="parent_guardian_signature"
               required
-          /></label>
+          ></label>
 
-          <label class="item-full-width"
+          <label class="item-full-width item-space"
             >Date:<input
               class="input-full-width"
               type="date"
               name="birth_date"
               min="2023-02-03"
               required
-          /></label>
+          ></label>
         </fieldset>
 
-        <button class="form-button" type="submit">Submit</button>
-        <button class="form-button" type="reset">Clean</button>
+        <div>
+          <button class="form-button" type="submit">Submit</button>
+          <button class="form-button" type="reset">Clean</button>
+        </div>
       </form>
     </main>
 
