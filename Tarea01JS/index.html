@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    >
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
+  </head>
+  <body>
+    <header>
+      <!-- Barra de navegacion -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img
+              src="./assets/Logo_Amazing_Events.png"
+              alt="Logo of Amazing Events"
+              height="100"
+              class="d-inline-block align-text-top"
+            >
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavAltMarkup"
+          >
+            <div class="navbar-nav fs-4">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="./events.html">Upcoming Events</a>
+              <a class="nav-link" href="./pastevents.html">Past Events</a>
+              <a class="nav-link" href="./contact.html">Contact</a>
+              <a class="nav-link" href="./stats.html">Stats</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container-fluid">
+      <div class="py-4">
+        <h1 class="text-center">Home</h1>
+        <form class="d-flex justify-content-around pt-2">
+          <div>
+            <fieldset class="form-check form-check-inline">
+              <label class="form-check-label">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="category"
+                  value="category01"
+                >Category01</label
+              >
+            </fieldset>
+            <fieldset class="form-check form-check-inline">
+              <label class="form-check-label">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="category"
+                  value="category02"
+                >Category02</label
+              >
+            </fieldset>
+            <fieldset class="form-check form-check-inline">
+              <label class="form-check-label">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="category"
+                  value="category03"
+                >Category03</label
+              >
+            </fieldset>
+            <fieldset class="form-check form-check-inline">
+              <label class="form-check-label">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="category"
+                  value="category04"
+                >Category04</label
+              >
+            </fieldset>
+          </div>
+
+          <fieldset>
+            <input type="search" name="search" placeholder="Event name" >
+
+            <input type="submit" value="Search" >
+          </fieldset>
+        </form>
+      </div>
+      <!-- <p>name, date, description, category, place, capacity, assistance or estimate, price</p> -->
+      <section class="row">
+        <h2 class="fst-italic">All events</h2>
+        <!-- mb para margin bottom-->
+        <!-- col-, col-sm, col-md, col-lg, col-xl-->
+  
+        <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-0 mb-sm-3">
+          <article class="card h-100">
+            <div class="container-img">
+              <img
+                src="./assets/Cinema.jpg"
+                class="card-img-top"
+                alt="Image of Cinema"
+              >
+            </div>
+            <div class="card-body text-center row aling-items-center">
+              <h3 class="card-title col-12">Cinema</h3>
+              <p class="card-text col-12">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+            <div class="card-footer d-flex justify-content-between bg-danger-subtle">
+              <p>Price: $1000</p>
+              <a href="./details.html" class="btn btn-danger">See more</a>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-0 mb-sm-3">
+          <article class="card h-100">
+            <img
+              src="./assets/Costume_Party.jpg"
+              class="card-img-top"
+              alt="Image of Costume Party"
+            >
+            <div class="card-body text-center row aling-items-center">
+              <h3 class="card-title col-12">Costume Party</h3>
+              <p class="card-text col-12">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+            <div class="card-footer d-flex justify-content-between bg-danger-subtle">
+              <p>Price: $1050</p>
+              <a href="./details.html" class="btn btn-danger">See more</a>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-0 mb-sm-3">
+          <article class="card h-100">
+            <img
+              src="./assets/Food_Fair.jpg"
+              class="card-img-top"
+              alt="Image of Food Fair"
+            >
+            <div class="card-body text-center row aling-items-center">
+              <h3 class="card-title col-12">Food Fair</h3>
+              <p class="card-text col-12">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+            <div class="card-footer d-flex justify-content-between bg-danger-subtle">
+              <p>Price: $1100</p>
+              <a href="./details.html" class="btn btn-danger">See more</a>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-0 mb-sm-3">
+          <article class="card h-100">
+            <img
+              src="./assets/Marathon.jpg"
+              class="card-img-top"
+              alt="Image of Marathon"
+            >
+            <div class="card-body text-center row aling-items-center">
+              <h3 class="card-title col-12">Marathon</h3>
+              <p class="card-text col-12">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+            <div class="card-footer d-flex justify-content-between bg-danger-subtle">
+              <p>Price: $1150</p>
+              <a href="./details.html" class="btn btn-danger">See more</a>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-0 mb-sm-3">
+          <article class="card h-100">
+            <img
+              src="./assets/Museum_Tour.jpg"
+              class="card-img-top"
+              alt="Image of Museum Tour"
+            >
+            <div class="card-body text-center row aling-items-center">
+              <h3 class="card-title col-12">Museum Tour</h3>
+              <p class="card-text col-12">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+            <div class="card-footer d-flex justify-content-between bg-danger-subtle">
+              <p>Price: $1200</p>
+              <a href="./details.html" class="btn btn-danger">See more</a>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-0 mb-sm-3">
+          <article class="card h-100">
+            <img
+              src="./assets/Music_Concert.jpg"
+              class="card-img-top"
+              alt="Image of Music Concert"
+            >
+            <div class="card-body text-center row aling-items-center">
+              <h3 class="card-title col-12">Music Concert</h3>
+              <p class="card-text col-12">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+            <div class="card-footer d-flex justify-content-between bg-danger-subtle">
+              <p>Price: $1250</p>
+              <a href="./details.html" class="btn btn-danger">See more</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-dark-subtle d-flex justify-content-between py">
+      <div class="bg-dark-subtle">
+        <a href="#"
+          ><img
+            src="./assets/instagram-removebg-preview.png"
+            alt="Logo of Instagram"
+            width="100"
+            class="p-2"
+          >
+        </a>
+
+        <a href="#"
+          ><img
+            src="./assets/facebook-removebg-preview.png"
+            alt="Logo of Facebook"
+            width="100"
+            class="p-2"
+          >
+        </a>
+        <a href="#"
+          ><img
+            src="./assets/whatsapp-removebg-preview.png"
+            alt="Logo of Whatsapp"
+            width="100"
+            class="p-2"
+          >
+        </a>
+      </div>
+      <p class="py-4 fs-3">Cohort</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

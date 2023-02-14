@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Contact Us</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    >
+    <link rel="stylesheet" href="./styles/style.css" >
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
+  </head>
+  <body>
+    <header>
+      <!-- Barra de navegacion -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img
+              src="./assets/Logo_Amazing_Events.png"
+              alt="Logo of Amazing Events"
+              height="100"
+              class="d-inline-block align-text-top"
+            >
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavAltMarkup"
+          >
+            <div class="navbar-nav fs-4">
+              <a class="nav-link" href="./index.html">Home</a>
+              <a class="nav-link" href="./events.html">Upcoming Events</a>
+              <a class="nav-link" href="./events.html">Past Events</a>
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="./contact.html"
+                >Contact</a
+              >
+              <a class="nav-link" href="./stats.html">Stats</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <section class="py-4">
+        <h1 class="text-center mb-4">Contact Us</h1>
+        <form class="pt-2 fs-5 mx-5">
+          <fieldset class="mb-4">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" id="name" class="form-control" name="name" >
+          </fieldset>
+          <fieldset class="mb-4">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" id="email" class="form-control" name="email" >
+          </fieldset>
+          <fieldset class="mb-4">
+            <label for="mesagge" class="form-label">Message:</label>
+            <textarea
+              id="mesagge"
+              class="form-control"
+              name="mesagge"
+              rows="4"
+              cols="50"
+            ></textarea>
+          </fieldset>
+          <input type="submit" value="Submit" class="mb-4 bg-danger text-white border-white" >
+        </form>
+      </section>
+    </main>
+    <footer class="bg-dark-subtle d-flex justify-content-between py">
+      <div class="bg-dark-subtle">
+        <a href="#"
+          ><img
+            src="./assets/instagram-removebg-preview.png"
+            alt="Logo of Instagram"
+            width="90"
+            class="p-2"
+          >
+        </a>
+
+        <a href="#"
+          ><img
+            src="./assets/facebook-removebg-preview.png"
+            alt="Logo of Facebook"
+            width="90"
+            class="p-2"
+          >
+        </a>
+        <a href="#"
+          ><img
+            src="./assets/whatsapp-removebg-preview.png"
+            alt="Logo of Whatsapp"
+            width="90"
+            class="p-2"
+          >
+        </a>
+      </div>
+      <p class="py-3 px-3 fs-3">Cohort</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
