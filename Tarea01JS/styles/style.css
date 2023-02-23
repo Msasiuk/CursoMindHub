@@ -1,0 +1,202 @@
+/*Paleta de rosado a celeste
+#F72585
+#B5179E
+#7209B7
+#560BAD
+#480CA8
+#3A0CA3
+#3F37C9
+#4361EE
+#4895EF
+#4CC9F0*/
+
+/*Color Logo
+#e0046c
+*/
+* {
+    box-sizing: border-box;
+}
+
+.container-fluid,
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../assets/Background.png);
+    background-size: cover;
+    color: white;
+
+}
+
+.navbar {
+    /* 345 Grados */
+    background: rgb(72, 149, 239);
+    background: linear-gradient(345deg, rgba(72, 149, 239, 1) 0%, rgba(67, 97, 238, 1) 25%, rgba(63, 55, 201, 1) 50%, rgba(58, 12, 163, 1) 75%, rgba(72, 12, 168, 1) 100%);
+}
+
+.nav-link,
+.navbar-nav .nav-link.active {
+    color: white;
+}
+
+.navbar-nav .nav-link.active {
+    /* font-weight: bold; */
+    text-shadow: 0px 0px 10px white;
+
+}
+
+.nav-link:hover {
+    color: white;
+    text-shadow: 0px 0px 10px white;
+}
+
+.logo {
+    animation: transitionLeft 0.75s;
+}
+
+@keyframes transitionLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.navbar-toggler {
+    background-color: #4895EF;
+
+}
+
+/* Body flex para poder acomodar por columna y poder hacer el main (hermano del footer crecer y dejarlo al final del viewport)*/
+.transition-initial {
+    flex-grow: 1;
+    animation: transitionInitial 0.75s;
+}
+
+/*Animación inicial del main, aparece del fondo*/
+@keyframes transitionInitial {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.h1,
+.footer {
+    background: rgb(72, 149, 239);
+    background: linear-gradient(345deg, rgba(72, 149, 239, 1) 0%, rgba(67, 97, 238, 1) 25%, rgba(63, 55, 201, 1) 50%, rgba(58, 12, 163, 1) 75%, rgba(72, 12, 168, 1) 100%);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    animation: transitionH1 1s;
+    opacity: 0.7;
+    color: white;
+    font-weight: bold;
+
+}
+
+@keyframes transitionH1 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.7;
+    }
+}
+
+.button-search {
+    background-color: #4895EF;
+    border: 1px solid rgb(56, 116, 185);
+    border-radius: 5px;
+    padding: 3px 10px;
+    color: white;
+}
+
+
+.card {
+    border-radius: 20px 60px;
+    overflow: hidden;
+    /* background: rgb(76, 201, 240);
+    background: radial-gradient(circle, rgba(76, 201, 240, 1) 0%, rgba(72, 149, 239, 1) 100%); */
+    background: rgb(247, 37, 133);
+    background: linear-gradient(180deg, rgba(247, 37, 133, 1) 0%, rgba(181, 23, 158, 1) 50%, rgba(114, 9, 183, 1) 100%);
+
+}
+
+.card:hover {
+    animation: transitionCard 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes transitionCard {
+    to {
+        transform: rotate(1deg) scale(1.01);
+        box-shadow: 0px 0px 25px 0px white;
+
+    }
+}
+
+/*
+#F72585
+#B5179E
+#7209B7
+#560BAD
+#480CA8
+#3A0CA3
+#3F37C9
+#4361EE
+#4895EF
+#4CC9F0*/
+
+.card-footer {
+    background: rgb(86, 11, 173);
+    background: linear-gradient(180deg, rgba(86, 11, 173, 1) 0%, rgba(72, 12, 168, 1) 50%, rgba(58, 12, 163, 1) 100%);
+}
+
+.btn:hover {
+    animation: transitionBtn 0.25s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes transitionBtn {
+    to {
+        box-shadow: inset 0px 0px 2px 0px white;
+    }
+}
+
+/* Ajuste en clase bootstrap para unificar el tamaño de las img */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.btn {
+    border-radius: 5px 15px;
+}
+
+/* Ajuste en clase bootstrap para alinear con search*/
+.form-check-inline {
+    margin-bottom: 0;
+}
+
+/* Ajuste en clase bootstrap para alinear con search*/
+fieldset.form-check.form-check-inline {
+    align-self: center;
+}

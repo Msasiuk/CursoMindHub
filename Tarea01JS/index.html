@@ -11,20 +11,21 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     >
+    <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
   </head>
-  <body>
+  <body class="body">
     <header>
       <!-- Barra de navegacion -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-xl bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"
             ><img
               src="./assets/Logo_Amazing_Events.png"
               alt="Logo of Amazing Events"
               height="100"
-              class="d-inline-block align-text-top"
+              class="logo d-inline-block align-text-top"
             >
           </a>
           <button
@@ -53,13 +54,13 @@
         </div>
       </nav>
     </header>
-    <main class="container-fluid">
-      <div class="py-4">
-        <h1 class="text-center">Home</h1>
-        <form class="d-flex justify-content-around pt-2">
-          <div>
-            <fieldset class="form-check form-check-inline">
-              <label class="form-check-label">
+    <main class="main">
+      <h1 class="h1 text-center">Home</h1>
+      <div class="transition-initial p-4 container-fluid">
+        <form class="d-flex flex-column flex-lg-row justify-content-around pt-2">
+          <div class="text-center">
+            <fieldset class="form-check form-check-inline md-2">
+              <label class="form-check-label ">
                 <input
                   class="form-check-input"
                   type="checkbox"
@@ -68,7 +69,7 @@
                 >Category01</label
               >
             </fieldset>
-            <fieldset class="form-check form-check-inline">
+            <fieldset class="form-check form-check-inline md-2">
               <label class="form-check-label">
                 <input
                   class="form-check-input"
@@ -98,17 +99,26 @@
                 >Category04</label
               >
             </fieldset>
+            <fieldset class="form-check form-check-inline">
+              <label class="form-check-label">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="category"
+                  value="category04"
+                >Category05</label
+              >
+            </fieldset>
           </div>
 
-          <fieldset>
+          <fieldset class="text-center">
             <input type="search" name="search" placeholder="Event name" >
-
-            <input type="submit" value="Search" >
+            <input class="button-search" type="submit" value="Search" >
           </fieldset>
         </form>
       </div>
       <!-- <p>name, date, description, category, place, capacity, assistance or estimate, price</p> -->
-      <section class="row">
+      <section class="transition-initial container-fluid row">
         <h2 class="fst-italic">All events</h2>
         <!-- mb para margin bottom-->
         <!-- col-, col-sm, col-md, col-lg, col-xl-->
@@ -128,7 +138,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
-            <div class="card-footer d-flex justify-content-between bg-danger-subtle">
+            <div class="card-footer d-flex justify-content-between ">
               <p>Price: $1000</p>
               <a href="./details.html" class="btn btn-danger">See more</a>
             </div>
@@ -147,7 +157,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
-            <div class="card-footer d-flex justify-content-between bg-danger-subtle">
+            <div class="card-footer d-flex justify-content-between ">
               <p>Price: $1050</p>
               <a href="./details.html" class="btn btn-danger">See more</a>
             </div>
@@ -166,7 +176,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
-            <div class="card-footer d-flex justify-content-between bg-danger-subtle">
+            <div class="card-footer d-flex justify-content-between ">
               <p>Price: $1100</p>
               <a href="./details.html" class="btn btn-danger">See more</a>
             </div>
@@ -185,7 +195,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
-            <div class="card-footer d-flex justify-content-between bg-danger-subtle">
+            <div class="card-footer d-flex justify-content-between ">
               <p>Price: $1150</p>
               <a href="./details.html" class="btn btn-danger">See more</a>
             </div>
@@ -204,7 +214,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
-            <div class="card-footer d-flex justify-content-between bg-danger-subtle">
+            <div class="card-footer d-flex justify-content-between ">
               <p>Price: $1200</p>
               <a href="./details.html" class="btn btn-danger">See more</a>
             </div>
@@ -223,7 +233,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
-            <div class="card-footer d-flex justify-content-between bg-danger-subtle">
+            <div class="card-footer d-flex justify-content-between ">
               <p>Price: $1250</p>
               <a href="./details.html" class="btn btn-danger">See more</a>
             </div>
@@ -231,35 +241,35 @@
         </div>
       </section>
     </main>
-    <footer class="bg-dark-subtle d-flex justify-content-between py">
-      <div class="bg-dark-subtle">
+    <footer class="footer d-flex justify-content-between py">
+      <div>
         <a href="#"
           ><img
-            src="./assets/instagram-removebg-preview.png"
+            src="./assets/Insta.svg"
             alt="Logo of Instagram"
             width="100"
-            class="p-2"
+            class="logo-footer p-3"
+          >
+        </a>
+        <a href="#"
+          ><img
+            src="./assets/Face.svg"
+            alt="Logo of Facebook"
+            width="100"
+            class="logo-footer p-3"
           >
         </a>
 
         <a href="#"
           ><img
-            src="./assets/facebook-removebg-preview.png"
-            alt="Logo of Facebook"
-            width="100"
-            class="p-2"
-          >
-        </a>
-        <a href="#"
-          ><img
-            src="./assets/whatsapp-removebg-preview.png"
+            src="./assets/What.svg"
             alt="Logo of Whatsapp"
             width="100"
-            class="p-2"
+            class="logo-footer p-3"
           >
         </a>
       </div>
-      <p class="py-4 fs-3">FE05-TN</p>
+      <p class=" fs-3">FE05-TN</p>
     </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
