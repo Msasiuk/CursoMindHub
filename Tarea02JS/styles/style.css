@@ -1,0 +1,450 @@
+/*Paleta de rosado a celeste
+#F72585
+#B5179E
+#7209B7
+#560BAD
+#480CA8
+#3A0CA3
+#3F37C9
+#4361EE
+#4895EF
+#4CC9F0
+
+Color Logo
+#e0046c
+
+MEDIDAS!! 
+375, 768 y 1440*/
+
+* {
+    box-sizing: border-box;
+}
+
+/* Body flex para poder acomodar por columna y poder hacer el main (hermano del footer crecer y dejarlo al final del viewport)
+
+Body width 100% para que sea container*/
+.body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    background-image: url(../assets/Background.png);
+    background-size: cover;
+    color: white;
+}
+
+/* otra forma de hacer todas las imagenes responsive
+img {
+    max-width: 100%;
+    max-height: 100%;
+} */
+
+.navbar {
+    /* 345 Grados */
+    background: rgb(72, 149, 239);
+    background: linear-gradient(345deg, rgba(72, 149, 239, 0.8) 0%, rgba(67, 97, 238, 0.8) 25%, rgba(63, 55, 201, 0.8) 50%, rgba(58, 12, 163, 0.8) 75%, rgba(72, 12, 168, 0.8) 100%);
+}
+
+/*Seteando maximo elemento padre de la imagen y margen por defecto*/
+.navbar-brand {
+    max-width: 80%;
+    margin-right: 0;
+}
+
+.nav-link,
+.navbar-nav .nav-link.active {
+    color: white;
+}
+
+.navbar-nav .nav-link.active {
+    /* font-weight: bold; */
+    text-shadow: 0px 0px 10px white;
+}
+
+/* Para que cuando colapse se vallan a la derecha los items*/
+.navbar-nav {
+    align-items: flex-end;
+}
+
+/* Reseteando padding de 8px*/
+.nav-link {
+    padding: 4px;
+}
+
+.nav-link:hover {
+    color: white;
+    text-shadow: 0px 0px 10px white;
+}
+
+.logo {
+    animation: transitionLeft 0.75s;
+    width: 100%;
+    object-fit: contain;
+}
+
+@keyframes transitionLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.navbar-toggler {
+    background-color: #4895EF;
+
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.transition-initial {
+    animation: transitionInitial 0.75s;
+}
+
+/*Animación inicial del main, aparece del fondo*/
+@keyframes transitionInitial {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.h1,
+.footer {
+    background: rgb(72, 149, 239);
+    background: linear-gradient(345deg, rgba(72, 149, 239, 0.8) 0%, rgba(67, 97, 238, 0.8) 25%, rgba(63, 55, 201, 0.8) 50%, rgba(58, 12, 163, 0.8) 75%, rgba(72, 12, 168, 0.8) 100%);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    animation: transitionH1 1s;
+    opacity: 0.8;
+    color: white;
+    font-weight: bold;
+}
+
+@keyframes transitionH1 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.8;
+    }
+}
+
+/* Form category index/past/future event
+Flex Row Wrap de pagina de contacto
+Card del details*/
+.form-category,
+.flex-row-wrap,
+.article-card-detail,
+.footer {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* Form de categorias del index, future/past events */
+.form-category {
+    justify-content: space-around;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.flex-row-wrap {
+    gap: 1rem;
+    margin-bottom: 40px;
+    justify-content: flex-end;
+}
+
+.form-control {
+    background: rgb(255, 255, 255, 0.8);
+    border: 3px solid rgb(58, 12, 163, 0.4);
+}
+
+/* Elementos de categorias del index, future/past events */
+.fieldset-category {
+    display: inline-block;
+}
+
+/* Elementos de categorias del index, future/past events */
+.input-category {
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+/* Elementos de categorias del index, future/past events */
+.button-search {
+    background-color: #4895EF;
+    border: 1px solid rgb(56, 116, 185);
+    border-radius: 5px;
+    padding: 3px 10px;
+    color: white;
+}
+
+.h2 {
+    display: none;
+}
+
+.section-flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.grid-card {
+    display: grid;
+}
+
+.grid-card {
+    /* Si queremos un diseño FLEXIBLE (el diseño se adapta al contenido), usamos flex.
+    Si queremos un diseño más fijo (el contenido se adapta al diseño), usamos grid.
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; */
+    width: 96%;
+    /* defino las columnas, por ejemplo 4 columnas del mismo tamaño grid-template-columns: repeat(4, 1fr); */
+    /*con auto fit y minmax le pido que se haga responsive y que si llega a menos de 400 vuelva a agrandarse la columna*/
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    /* genera un gap/espacio tanto en los rows/columns*/
+    grid-gap: 20px;
+    /* justify-content: space-between; */
+    grid-template-rows: auto;
+    align-self: center;
+    margin-bottom: 50px;
+}
+
+/*Minimo del column del grid 350px*/
+@media only screen and (max-width:400px) {
+    .grid-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    border-radius: 20px 60px;
+    overflow: hidden;
+    /* background: rgb(76, 201, 240);
+    background: radial-gradient(circle, rgba(76, 201, 240, 1) 0%, rgba(72, 149, 239, 1) 100%); */
+    background: rgb(247, 37, 133);
+    background: linear-gradient(180deg, rgba(247, 37, 133, 0.8) 0%, rgba(181, 23, 158, 0.8) 50%, rgba(114, 9, 183, 0.8) 100%);
+    /* flex-grow crecimiento inicial
+    flex-shrink cantidad a achicar
+    flex-basis espacio a ocupar  
+    flex: 450px 0 0;
+    
+    max-width: 90%; 
+    margin-bottom: 20px;*/
+}
+
+.card:hover {
+    animation: transitionCard 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes transitionCard {
+    to {
+        transform: rotate(1deg) scale(1.01);
+        box-shadow: 0px 0px 25px 0px white;
+    }
+}
+
+.card-body,
+.card-footer {
+    opacity: 0.8;
+}
+
+.card-footer {
+    background: rgb(86, 11, 173);
+    background: linear-gradient(180deg, rgba(86, 11, 173, 0.8) 0%, rgba(72, 12, 168, 0.8) 50%, rgba(58, 12, 163, 0.8) 100%);
+    align-items: baseline;
+    padding-left: 30px;
+}
+
+.card-footer>p {
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+}
+
+.btn:hover {
+    animation: transitionBtn 0.25s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes transitionBtn {
+    to {
+        box-shadow: inset 0px 0px 2px 0px white;
+    }
+}
+
+/* Ajuste en clase bootstrap para unificar el tamaño de las img de las cards*/
+.card-img-top {
+    /* height: 200px; */
+    width: 100%;
+    /* aspect-radio elijo el ratio 1/1 imagen cuadrada o rectangular pero debe tener declarado un width*/
+    aspect-ratio: 2 / 1;
+    /* object fit como hidden overflow de lo que sobre de la imagen*/
+    object-fit: cover;
+}
+
+.btn {
+    border-radius: 5px 15px;
+}
+
+/* Elementos pagina detail */
+.article-card-detail {
+    margin-bottom: 40px;
+    opacity: 0.9;
+    border: none;
+    animation: forwards;
+    box-shadow: 0px 0px 25px 0px white;
+}
+
+.acd-item1 {
+    flex: 1 0 100%;
+    text-align: center;
+    background: rgb(86, 11, 173);
+    background: linear-gradient(180deg, rgba(86, 11, 173, 0.8) 0%, rgba(72, 12, 168, 0.8) 50%, rgba(58, 12, 163, 0.8) 100%);
+}
+
+.acd-item1 * {
+    margin: 10px 0px;
+    padding: 5px 0px;
+    text-transform: uppercase;
+}
+
+/* Ajuste en tamaño de imagen del details*/
+.acd-item2 {
+    flex: 1 1 300px;
+    width: 50%;
+    aspect-ratio: 1.5 / 1;
+    object-fit: cover;
+}
+
+.acd-item3 {
+    flex: 1 1 300px;
+    padding: 10px 20px;
+    text-align: justify;
+}
+
+.acd-item3 span {
+    font-weight: bold;
+    font-style: italic;
+    display: block;
+    text-align: start;
+}
+
+@media only screen and (max-width:767px) {
+    .acd-item3 span {
+        display: inline;
+    }
+
+}
+
+/* Elementos del form de pagina contact */
+.fieldset-sm {
+    flex: 1 1 400px;
+}
+
+.fieldset-lg {
+    flex: 1 0 100%;
+}
+
+/* Ajuste en clase bootstrap para alinear con search*/
+.form-check-inline {
+    margin-bottom: 0;
+}
+
+/* Ajuste en clase bootstrap para alinear con search*/
+fieldset.form-check.form-check-inline {
+    align-self: center;
+}
+
+/* Elementos de pagina Stats */
+.table {
+    border-collapse: collapse;
+    border: 2px solid white;
+    box-shadow: 0px 0px 25px 0px white;
+    color: white;
+    opacity: 0.8;
+    overflow: hidden;
+    border-radius: 15px 30px;
+    background: rgb(247, 37, 133);
+    background: linear-gradient(180deg, rgba(247, 37, 133, 0.8) 0%, rgba(181, 23, 158, 0.8) 50%, rgba(114, 9, 183, 0.8) 100%);
+    text-align: center;
+}
+
+.table-head {
+    background: rgb(86, 11, 173);
+    background: linear-gradient(180deg, rgba(86, 11, 173, 0.8) 0%, rgba(72, 12, 168, 0.8) 50%, rgba(58, 12, 163, 0.8) 100%);
+}
+
+.title-table {
+    text-transform: uppercase;
+}
+
+.table td {
+    padding: 10px 10px 10px 15px;
+    width: 33%;
+}
+
+@media only screen and (max-width:768px) {
+    .table {
+        border: transparent;
+    }
+
+    .display-none {
+        display: none;
+    }
+
+    .table td {
+        display: block;
+        text-align: right;
+        width: 100%;
+    }
+
+    table td::before {
+        content: attr(data-title) " :";
+        float: left;
+        font-weight: bold;
+    }
+}
+
+.footer {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.a-footer {
+    color: transparent;
+}
+
+.logo-footer {
+    width: 60px;
+}
+
+.logo-footer,
+.p-footer {
+    margin: 0px 10px;
+}
+
+.p-footer {
+    font-size: 2.5rem;
+    margin-left: auto;
+}

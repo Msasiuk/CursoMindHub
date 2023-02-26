@@ -191,6 +191,24 @@
     border-radius: 5px 15px;
 }
 
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex-row-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fieldset-sm {
+    flex: 1 0 300px;
+}
+
+.fieldset-lg {
+    flex: 1 0 100%;
+}
+
 /* Ajuste en clase bootstrap para alinear con search*/
 .form-check-inline {
     margin-bottom: 0;

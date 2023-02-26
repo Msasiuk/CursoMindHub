@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stats</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico" />
+  </head>
+  <body class="body">
+    <header>
+      <!-- Barra de navegacion de Bootstrap-->
+      <nav class="navbar navbar-expand-xl">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img
+              src="./assets/Logo_Amazing_Events.png"
+              alt="Logo of Amazing Events"
+              height="100"
+              class="logo d-inline-block align-text-top"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavAltMarkup"
+          >
+            <div class="navbar-nav fs-4">
+              <a class="nav-link" href="./index.html">Home</a>
+              <a class="nav-link" href="./events.html">Upcoming Events</a>
+              <a class="nav-link" href="./pastevents.html">Past Events</a>
+              <a class="nav-link" href="./contact.html">Contact</a>
+              <a class="nav-link active" aria-current="page" href="#">Stats</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <h1 class="h1 text-center">Stats</h1>
+      <div class="transition-initial container">
+        <!-- <p>name, date, description, category, place, capacity, assistance or estimate, price</p> -->
+        <table class="table">
+          <thead class="table-head">
+            <tr class="title-table fs-4">
+              <th colspan="3">Events statistics</th>
+            </tr>
+            <tr class="display-none fs-5">
+              <th>Events with the highest percentage of attendance</th>
+              <th>Events with the lowest percentage of attendance</th>
+              <th>Event with larger capacity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-title="Highest Percentage">Event Name</td>
+              <td data-title="Lowest Percentage">Event Name</td>
+              <td data-title="Larger Capacity">Event Name</td>
+            </tr>
+            <tr>
+              <td data-title="Highest Percentage">Event Name</td>
+              <td data-title="Lowest Percentage">Event Name</td>
+              <td data-title="Larger Capacity">Event Name</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="table">
+          <thead class="table-head">
+            <tr class="title-table fs-4">
+              <th colspan="3">Upcoming events statistics by category</th>
+            </tr>
+            <tr class="display-none fs-5">
+              <th>Categories</th>
+              <th>Revenues</th>
+              <th>Percentage of attendance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-title="Categories">Event Category</td>
+              <td data-title="Revenues">Event Revenue</td>
+              <td data-title="Percentage of Attn">Event Percentage</td>
+            </tr>
+            <tr>
+              <td data-title="Categories">Event Category</td>
+              <td data-title="Revenues">Event Revenue</td>
+              <td data-title="Percentage of Attn">Event Percentage</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="table">
+          <thead class="table-head">
+            <tr class="title-table fs-4">
+              <th colspan="3">Past Events statistic by category</th>
+            </tr>
+            <tr class="display-none fs-5">
+              <th>Categories</th>
+              <th>Revenues</th>
+              <th>Percentage of attendance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-title="Categories">Event Category</td>
+              <td data-title="Revenues">Event Revenue</td>
+              <td data-title="Percentage of Attn">Event Percentage</td>
+            </tr>
+            <tr>
+              <td data-title="Categories">Event Category</td>
+              <td data-title="Revenues">Event Revenue</td>
+              <td data-title="Percentage of Attn">Event Percentage</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <a href="#" class="a-footer"
+        ><img
+          src="./assets/Insta.svg"
+          class="logo-footer"
+          alt="Logo of Instagram"
+        />
+      </a>
+      <a href="#" class="a-footer"
+        ><img
+          src="./assets/Face.svg"
+          class="logo-footer"
+          alt="Logo of Facebook"
+        />
+      </a>
+      <a href="#" class="a-footer"
+        ><img
+          src="./assets/What.svg"
+          class="logo-footer"
+          salt="Logo of Whatsapp"
+        />
+      </a>
+      <p class="p-footer">FE05-TN</p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
