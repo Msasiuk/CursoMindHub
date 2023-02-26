@@ -2,7 +2,7 @@
 let eventList = []
 
 for (let element of data.events) {
-    eventList.push(element)
+  eventList.push(element)
 }
 
 //Capturo el elemento donde se imprimiran las cards
@@ -17,9 +17,9 @@ let cardList = []
 for (let event of eventList) {
   /*Debería comparar el value del elemnto con el id de la lista y devolver solo el id que coincida
   if(event.id == event) {cardList.push......}*/
-    cardList.push(`
+  cardList.push(`
     <div class="acd-item1 fs-4">
-    <h2>${event.name}</h2>
+    <h3>${event.name}</h3>
     <p>${event.date}</p>
   </div>
   <img
